@@ -1,11 +1,11 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: frontend-scaler
+  name: kuard-scaler
 spec:
   scaleTargetRef:
     kind: ReplicaSet
-    name: frontend
+    name: kuard
   minReplicas: 2
   maxReplicas: 10
   targetCPUUtilizationPercentage: 50
