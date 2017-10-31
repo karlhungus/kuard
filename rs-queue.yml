@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   labels:
     app: work-queue
-    compoenent: queue
+    component: queue
     chapter: jobs
   name: queue
 spec:
@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: work-queue
-        compoenent: queue
+        component: queue
         chapter: jobs
     spec:
       containers:
