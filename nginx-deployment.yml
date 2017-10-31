@@ -22,13 +22,13 @@ spec:
   template:
     metadata:
       annotations:
-        kubernetes.io/change-cause: "Update nginx to 1.9.10"
+        kubernetes.io/change-cause: "Update nginx to 1.10.2"
       creationTimestamp: null
       labels:
         run: nginx
     spec:
       containers:
-      - image: nginx:1.9.10
+      - image: nginx:1.10.2
         imagePullPolicy: Always
         name: nginx
         resources: {}
