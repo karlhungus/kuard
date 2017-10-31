@@ -10,7 +10,7 @@ metadata:
   name: nginx
   selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/nginx
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       run: nginx
@@ -21,13 +21,15 @@ spec:
     type: RollingUpdate
   template:
     metadata:
+      annotations:
+        kubernetes.io/change-cause: "Update nginx to 1.9.10"
       creationTimestamp: null
       labels:
         run: nginx
     spec:
       containers:
-      - image: nginx:1.7.12
-        imagePullPolicy: IfNotPresent
+      - image: nginx:1.9.10
+        imagePullPolicy: Always
         name: nginx
         resources: {}
         terminationMessagePath: /dev/termination-log
