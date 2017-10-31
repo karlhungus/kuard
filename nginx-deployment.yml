@@ -12,6 +12,10 @@ metadata:
 spec:
   # Limit the revision history to 14 rollouts
   revisionHistoryLimit: 14
+  # wait 60 seconds after the seeing a pod be healthy before doing the next pod
+  minReadySeconds: 60
+  # wait 10 minutes then mark the deploy is failed if not healthy (from pod creation)
+  progressDeadlineSeconds: 600
   replicas: 3
   selector:
     matchLabels:
