@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  another-param: another-value
+  extra-param: extra-value
+  my-config.txt: |
+    # samle config file
+    parameter1=value1
+    parameter2=value2
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2017-10-31T00:23:13Z
+  name: my-config
+  namespace: default
+  resourceVersion: "456757"
+  selfLink: /api/v1/namespaces/default/configmaps/my-config
+  uid: aee4259d-bdd1-11e7-b9fb-42010a8e0172
